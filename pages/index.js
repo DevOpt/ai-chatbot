@@ -30,8 +30,8 @@ const Home = () => {
       {/* <Hero /> */}
       <SectionTitle
         pretitle="Welcome to RCE!"
-        title=" Why should you use this editing software">
-        Report Card Editor is a free text editing software powered by AI, designed to assist teachers in submitting their report cards quickly.
+        title=" Why should you use this editing software?">
+        Report Card Editor is a free text editing tool powered by AI that is designed to help teachers submit their report cards quickly.
       </SectionTitle>
       <SearchBar />
       {/* <SearchResult /> */}

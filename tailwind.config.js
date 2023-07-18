@@ -12,6 +12,10 @@ module.exports = {
       },
       maxWidth: {
         'mdc': '48rem',
+      },
+      minWidth: {
+        'mnc': '48rem',
+        'msc': '38rem',
       }
     },
     fontFamily: {

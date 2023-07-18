@@ -6,7 +6,7 @@ const SearchBar = () => {
   const [textInput, setTextInput] = useState('');
   const [resultInput, setResultInput] = useState('');
   const configuration = new Configuration({
-    apiKey: "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",
+    apiKey: process.env.OPENAI_API_KEY,
   });
   const openai = new OpenAIApi(configuration);
 
@@ -16,6 +16,10 @@ const SearchBar = () => {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    setResultInput('Editing...');
+    setTimeout(() => {
+      // delay for no reason
+    }, 3000);
     try {
       const response = await openai.createChatCompletion({
           model: "gpt-3.5-turbo",
@@ -70,6 +74,7 @@ const SearchBar = () => {
       {resultInput !== '' && 
         <SearchResult text={resultInput}/>
       }
+      {/* <SearchResult text="atawsf asdfsad asdfasdf asdfsadf asdfsadf asdfasdfa asdfsadfas asdfs"/> */}
     </>
   );
 };
@@ -78,7 +83,7 @@ const SearchBar = () => {
 const SearchResult = (props) => {
   return (
     <Container className="flex flex-wrap mb-20 lg:gap-10 lg:flex-nowrap items-center justify-center">
-      <div className="max-w-mdc p-6 bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+      <div className="max-w-mdc md:min-w-mnc sm:min-w-msc p-6 bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
         <p className="font-normal text-gray-700 dark:text-gray-400">{props.text}</p>
       </div>
     </Container>
