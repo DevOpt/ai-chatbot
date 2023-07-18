@@ -75,7 +75,6 @@ const SearchBar = () => {
       {resultInput !== '' && 
         <SearchResult text={resultInput}/>
       }
-      {/* <SearchResult text="atawsf asdfsad asdfasdf asdfsadf asdfsadf asdfasdfa asdfsadfas asdfs"/> */}
     </>
   );
 };
