@@ -6,6 +6,8 @@ import SectionTitle from "../components/sectionTitle";
 import { benefitOne, benefitTwo } from "../components/data";
 import Video from "../components/video";
 import Benefits from "../components/benefits";
+import SearchBar from "../components/searchbar";
+import SearchResult from "../components/searchresult";
 import Footer from "../components/footer";
 import Testimonials from "../components/testimonials";
 import Cta from "../components/cta";
@@ -25,15 +27,15 @@ const Home = () => {
       </Head>
 
       <Navbar />
-      <Hero />
+      {/* <Hero /> */}
       <SectionTitle
-        pretitle="Nextly Benefits"
-        title=" Why should you use this landing page">
-        Nextly is a free landing page & marketing website template for startups
-        and indie projects. Its built with Next.js & TailwindCSS. And its
-        completely open-source.
+        pretitle="Welcome to RCE!"
+        title=" Why should you use this editing software">
+        Report Card Editor is a free text editing software powered by AI, designed to assist teachers in submitting their report cards quickly.
       </SectionTitle>
-      <Benefits data={benefitOne} />
+      <SearchBar />
+      {/* <SearchResult /> */}
+      {/* <Benefits data={benefitOne} />
       <Benefits imgPos="right" data={benefitTwo} />
       <SectionTitle
         pretitle="Watch a video"
@@ -53,11 +55,10 @@ const Home = () => {
       <SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
         Answer your customers possible questions here, it will increase the
         conversion rate as well as support or chat requests.
-      </SectionTitle>
-      <Faq />
-      <Cta />
+      </SectionTitle> */}
+      {/* <Faq />
+      <Cta /> */}
       <Footer />
-      <PopupWidget />
     </>
   );
 }

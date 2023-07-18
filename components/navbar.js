@@ -5,11 +5,6 @@ import { Disclosure } from "@headlessui/react";
 
 const Navbar = () => {
   const navigation = [
-    "Product",
-    "Features",
-    "Pricing",
-    "Company",
-    "Blog",
   ];
 
   return (
@@ -25,13 +20,13 @@ const Navbar = () => {
                     <span>
                       <Image
                         src="/img/logo.svg"
-                        alt="N"
+                        alt="R"
                         width="32"
                         height="32"
                         className="w-8"
                       />
                     </span>
-                    <span>Nextly</span>
+                    <span>Report Card Editor</span>
                   </span>
                 </Link>
 
@@ -58,18 +53,6 @@ const Navbar = () => {
                   </svg>
                 </Disclosure.Button>
 
-                <Disclosure.Panel className="flex flex-wrap w-full my-5 lg:hidden">
-                  <>
-                    {navigation.map((item, index) => (
-                      <Link key={index} href="/" className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none">
-                          {item}
-                      </Link>
-                    ))}
-                    <Link href="/" className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5">         
-                        Get Started
-                    </Link>
-                  </>
-                </Disclosure.Panel>
               </div>
             </>
           )}
@@ -89,9 +72,6 @@ const Navbar = () => {
         </div>
 
         <div className="hidden mr-3 space-x-4 lg:flex nav__item">
-          <Link href="/" className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5">
-              Get Started
-          </Link>
 
           <ThemeChanger />
         </div>

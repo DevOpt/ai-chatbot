@@ -10,6 +10,9 @@ module.exports = {
       colors: {
         trueGray: colors.neutral,
       },
+      maxWidth: {
+        'mdc': '48rem',
+      }
     },
     fontFamily: {
       sans: ["Inter", ...defaultTheme.fontFamily.sans],
