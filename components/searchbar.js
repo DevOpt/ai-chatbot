@@ -6,7 +6,7 @@ const SearchBar = () => {
   const [textInput, setTextInput] = useState('');
   const [resultInput, setResultInput] = useState('');
   const configuration = new Configuration({
-    apiKey: process.env.OPENAI_API_KEY,
+    apiKey: "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",
   });
   const openai = new OpenAIApi(configuration);
 
