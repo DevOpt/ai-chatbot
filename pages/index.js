@@ -21,7 +21,7 @@ const Home = () => {
       <SectionTitle
         pretitle="Welcome to RCE!"
         title=" Why should you use this editing software?">
-        Report Card Editor is a free text editing tool powered by AI that is designed to help teachers submit their report cards faster.
+        Report Card Editor is a free text editing tool that is designed to help teachers submit their report cards faster.
       </SectionTitle>
       <SearchBar />
       <Footer />

@@ -83,7 +83,7 @@ const SearchBar = () => {
 const SearchResult = (props) => {
   return (
     <Container className="flex flex-wrap mb-20 lg:gap-10 lg:flex-nowrap items-center justify-center">
-      <div className="max-w-mdc md:min-w-mnc sm:min-w-msc p-6 bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+      <div className="max-w-mdc md:min-w-mnc sm:min-w-msc p-6 bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700">
         <p className="font-normal text-gray-700 dark:text-gray-400">{props.text}</p>
       </div>
     </Container>
