@@ -43,6 +43,7 @@ const SearchBar = () => {
     setResultInput(data.content);
     console.log(data);
     } catch (error) {
+        setResultInput("Error occured while processing the draft 😞");
         console.error("Error processing the POST request", error);
     } 
     setTextInput('');
