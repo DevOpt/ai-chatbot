@@ -64,7 +64,7 @@ const SearchBar = () => {
                   </textarea>
               </div>
               <div className="flex items-center justify-between px-3 py-2 border-t dark:border-gray-600">
-                  <button type="submit" className="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800">
+                  <button type="submit" className="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-indigo-600 rounded-lg focus:ring-4 focus:ring-indigo-200 dark:focus:ring-indigo-900 hover:bg-indigo-800">
                       Edit
                   </button>
               </div>
