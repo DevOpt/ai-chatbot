@@ -5,14 +5,12 @@ import { Button } from '@/components/ui/button';
 
 interface CodeBlockProps {
   node: any;
-  inline: boolean;
   className: string;
   children: any;
 }
 
 export function CodeBlock({
   node,
-  inline,
   className,
   children,
   ...props
@@ -26,7 +24,8 @@ export function CodeBlock({
     }
   };
 
-  if (!inline) {
+  // check if the node property has a language type to distinguish between code and code block. code should be undefined
+  if (node.properties.className) {
     return (
       <div className="not-prose relative flex flex-col">
         <pre

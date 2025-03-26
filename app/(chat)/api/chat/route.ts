@@ -123,7 +123,7 @@ export async function POST(request: Request) {
                   messages: [userMessage],
                   responseMessages: response.messages,
                 });
-
+                console.log(response.messages[0].content)
                 await saveMessages({
                   messages: [
                     {
