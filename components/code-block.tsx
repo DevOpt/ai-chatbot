@@ -1,5 +1,8 @@
 'use client';
 
+import { Copy } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+
 interface CodeBlockProps {
   node: any;
   inline: boolean;
@@ -14,15 +17,32 @@ export function CodeBlock({
   children,
   ...props
 }: CodeBlockProps) {
+
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(children);
+    } catch (err) {
+      console.error('Failed to copy:', err);
+    }
+  };
+
   if (!inline) {
     return (
-      <div className="not-prose flex flex-col">
+      <div className="not-prose relative flex flex-col">
         <pre
           {...props}
-          className={`text-sm w-full overflow-x-auto dark:bg-zinc-900 p-4 border border-zinc-200 dark:border-zinc-700 rounded-xl dark:text-zinc-50 text-zinc-900`}
+          className="text-sm w-full overflow-x-auto p-4 border border-zinc-200 dark:border-zinc-700 rounded-xl dark:text-zinc-50 text-zinc-900 relative"
         >
           <code className="whitespace-pre-wrap break-words">{children}</code>
         </pre>
+        <Button
+          onClick={copyToClipboard}
+          variant="ghost"
+          size="icon"
+          className="absolute top-2 right-2 p-2 text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100"
+        >
+          <Copy size={16} />
+        </Button>
       </div>
     );
   } else {
