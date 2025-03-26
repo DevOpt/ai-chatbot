@@ -5,6 +5,7 @@ import {
 } from 'ai';
 import { groq } from '@ai-sdk/groq';
 import { xai } from '@ai-sdk/xai';
+import { openai } from '@ai-sdk/openai';
 import { isTestEnvironment } from '../constants';
 import {
   artifactModel,
@@ -25,6 +26,7 @@ export const myProvider = isTestEnvironment
   : customProvider({
       languageModels: {
         'grok-2': xai('grok-2-latest'),
+        'gpt-4o': openai('gpt-4o-2024-08-06'),
         'chat-model-reasoning': wrapLanguageModel({
           model: groq('deepseek-r1-distill-llama-70b'),
           middleware: extractReasoningMiddleware({ tagName: 'think' }),
