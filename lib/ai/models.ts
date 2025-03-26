@@ -1,4 +1,4 @@
-export const DEFAULT_CHAT_MODEL: string = 'chat-model';
+export const DEFAULT_CHAT_MODEL: string = 'grok-2';
 
 interface ChatModel {
   id: string;
@@ -8,8 +8,8 @@ interface ChatModel {
 
 export const chatModels: Array<ChatModel> = [
   {
-    id: 'chat-model',
-    name: 'Chat model',
+    id: 'grok-2',
+    name: 'Grok 2',
     description: 'Primary model for all-purpose chat',
   },
   {
