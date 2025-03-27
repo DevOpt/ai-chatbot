@@ -1,6 +1,7 @@
 import { put } from '@vercel/blob';
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
+import { allowedFileTypes } from '@/lib/constants';
 
 import { auth } from '@/app/(auth)/auth';
 
@@ -12,8 +13,8 @@ const FileSchema = z.object({
       message: 'File size should be less than 5MB',
     })
     // Update the file type based on the kind of files you want to accept
-    .refine((file) => ['image/jpeg', 'image/png'].includes(file.type), {
-      message: 'File type should be JPEG or PNG',
+    .refine((file) => allowedFileTypes.includes(file.type), {
+      message: 'This file type is not supported',
     }),
 });
 
