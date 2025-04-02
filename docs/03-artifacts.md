@@ -5,7 +5,7 @@ Artifacts is a special user interface mode that allows you to have a workspace l
 The template already ships with the following artifacts:
 
 - **Text Artifact**: A artifact that allows you to work with text content like drafting essays and emails.
-- **Code Artifact**: A artifact that allows you to write and execute code (Python).
+- **Code Artifact**: A artifact that allows you to write and execute code (default: Python).
 - **Image Artifact**: A artifact that allows you to work with images like editing, annotating, and processing images.
 - **Sheet Artifact**: A artifact that allows you to work with tabular data like creating, editing, and analyzing data.
 
